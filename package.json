@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/Francesca-Lisi/express-blog-api-crud/issues"
   },
-  "homepage": "https://github.com/Francesca-Lisi/express-blog-api-crud#readme"
+  "homepage": "https://github.com/Francesca-Lisi/express-blog-api-crud#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
 }
