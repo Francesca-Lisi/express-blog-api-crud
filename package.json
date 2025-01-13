@@ -1,0 +1,22 @@
+{
+  "name": "express-blog-api-crud",
+  "version": "1.0.0",
+  "description": "Express Blog - API CRUD (parte 1) === Esercizio 07/01/25 ## Consegna",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "watch": "node --watch app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Francesca-Lisi/express-blog-api-crud.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Francesca-Lisi/express-blog-api-crud/issues"
+  },
+  "homepage": "https://github.com/Francesca-Lisi/express-blog-api-crud#readme"
+}
