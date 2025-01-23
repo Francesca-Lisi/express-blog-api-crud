@@ -20,7 +20,18 @@ const show = (req, res) => {
 }
 
 const store = (req, res) => {
-  res.send('Aggiungo un nuovo post')
+
+  const id = posts.at(-1).id + 1;
+  const newPost = {
+    id,
+    ...req.body
+  }
+
+  posts.push(newPost);
+  console.log(posts);
+
+  res.status(201);
+  res.json(posts);
 }
 
 const update = (req, res) => {
@@ -32,7 +43,17 @@ const modify = (req, res) => {
 }
 
 const destroy = (req, res) => {
-  res.send("Elimino il post con id" + req.params.id)
+  const post = posts.find(post => post.id == req.params.id)
+  if (!post) {
+    res.status(404)
+    return res.json({
+      message: 'Post non trovato',
+      status: 404,
+      error: 'not found'
+    })
+  }
+  posts.splice(posts.indexOf(post), 1)
+  res.sendStatus(204)
 }
 
 module.exports = {
