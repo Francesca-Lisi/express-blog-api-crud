@@ -1,11 +1,22 @@
 const posts = require('../data/posts')
 
 const index = (req, res) => {
-  res.send('Elenco dei posts')
+  res.json(posts)
+
+
 }
 
 const show = (req, res) => {
-  res.send("visualizzo un post in base all'id" + req.params.id)
+  const post = posts.find(post => post.id == req.params.id)
+  if (!post) {
+    res.status(404)
+    return res.json({
+      message: 'Post non trovato',
+      status: 404,
+      error: 'not found'
+    })
+  }
+  res.json(post)
 }
 
 const store = (req, res) => {
